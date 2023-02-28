@@ -1,0 +1,42 @@
+set SERVEROUTPUT on;
+
+clear screen;
+
+declare
+
+v_cust_name varchar2(20);
+
+v_mobile varchar2(20);
+
+v_address varchar2(20);
+
+begin
+
+insert into customer(cust_id,cust_name,dob,mobile,address) values (100000,'panneer','01-06-1999',9090897867,'kanchipuram');
+
+insert into customer(cust_id,cust_name,dob,mobile,address) values (100001,'selvam','06-01-1998',8978679089,'chennai');
+
+insert into customer(cust_id,cust_name,dob,mobile,address) values (100002,'Ashok','04-06-1993',6797908980,'chennai');
+
+commit;
+
+dbms_output.put_line('values inserted');
+
+update customer set address = 'hydrabad' where cust_id=100001;
+
+commit;
+
+dbms_output.put_line('values updated);
+
+delete from customer where cust_id=100002;
+
+commit;
+
+select cust_id,cust_mobile,address into v_cust,v_mobile,v_address from customer where cust_id=100002;
+
+dbms_output.put_line('customer are listed below:');
+dbms_output.put_line('customer name :'||v_cust_name);
+dbms_output.put_line('customer mobile_no :'||v_mobile);
+dbms_output.put_line('customer address:'||v_address);
+
+end;
