@@ -8,12 +8,7 @@ CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20), species VARCHAR(20), sex 
 INSERT INTO pet (name,owner,species,sex,birth,death) VALUES ("kumar","jai","dog",'M',"01/01/2000","01/10/2010");
 
 
-CREATE TABLE person(
-STUD_ID NUMBER(10),
-COURSE_NAME VARCHAR2(10),
-LOCTION VARCHAR2(10),
-GENDER VARCHAR2(10),
-PHONE_NO NUMBER(10));
+
 
 
 ---- INSERT VALUES 
